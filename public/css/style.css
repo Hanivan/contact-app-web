@@ -1,0 +1,111 @@
+body {
+  background-color: #eee;
+}
+
+ul.nav-links {
+  background-color: darkseagreen;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+ul.nav-links li {
+  margin: 8px;
+}
+
+ul.nav-links li {
+  display: inline-block;
+  margin-right: 1em;
+}
+
+ul.nav-links li a {
+  text-decoration: none;
+  color: blue;
+}
+ul.nav-links li a:hover,
+ul.nav-links li a:active {
+  text-decoration: underline;
+  color: blueviolet;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+table a.t-link {
+  text-decoration: none;
+  color: blue;
+}
+
+table a.t-link:hover,
+table a.t-link:active {
+  text-decoration: underline;
+  color: blueviolet;
+}
+
+p.success {
+  color: lightgreen;
+  font-weight: bold;
+}
+
+p.alert {
+  color: red;
+  font-weight: bold;
+}
+
+.detail-kontak a {
+  text-decoration: none;
+  color: blue;
+}
+
+.detail-kontak a:hover,
+.detail-kontak a:active {
+  text-decoration: underline;
+  color: blueviolet;
+}
+
+.title-contact {
+  margin-bottom: 0.4em;
+}
+
+.c-add {
+  color: blue;
+  text-decoration: none;
+  margin-bottom: 1em;
+  display: block;
+}
+
+.c-add:hover,
+.c-add:active {
+  color: blueviolet;
+  text-decoration: underline;
+}
+
+form.form-detail {
+  display: inline-block;
+}
+
+form.form-detail button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: blue;
+  font-size: 15px;
+}
+
+form.form-detail button:hover {
+  color: blueviolet;
+  text-decoration: underline;
+}

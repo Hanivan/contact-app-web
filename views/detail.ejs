@@ -1,0 +1,22 @@
+<div class="detail-kontak">
+   <h2>Detail Kontak</h2>
+   <% if(!contact) { %>
+      <p class="alert">Data kontak tidak ada. </p>
+      <a href="/contact">&laquo; Kembali ke daftar kontak</a>
+   <% } else { %>
+      <ul>
+         <li><%= contact.nama %></li>
+         <li><%= contact.nohp %></li>
+         <li><%= contact.email %></li>
+         <br>
+         <a href="/contact/edit/<%= contact.nama %>">Ubah Kontak</a>
+         <!-- <a href="/contact/delete/<%= contact.nama %>" onclick="return confirm('Yakin?');">Hapus Kontak</a> -->
+         <form action="/contact?_method=DELETE" method="POST" class="form-detail">
+            <input type="hidden" name="nama" value="<%= contact.nama %>" >
+            <button type="submit" onclick="return confirm('Yakin?');">Hapus</button>
+         </form>
+         <br>
+         <a href="/contact">&laquo;Kembali Ke Daftar Kontak</a>
+      </ul>
+   <% } %>
+</div>

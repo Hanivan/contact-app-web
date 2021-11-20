@@ -1,0 +1,31 @@
+<h2>Form Ubah Data Kontak</h2>
+
+   <% if(typeof errors !== 'undefined') { %>
+      <ul>
+         <% errors.forEach(error => { %>
+            <li><p class="alert"><%= error.msg %></p></li>
+         <% }) %>
+      </ul>
+   <% } %>
+
+   <form action="/contact?_method=PUT" method="post">
+      <input type="hidden" name="_id" value="<%= contact._id %>">
+      <input type="hidden" name="oldNama" id="oldNama" style="margin-bottom: 15px;" required value="<%= contact.oldNama || contact.nama %>" />
+
+      <label for="nama" style="margin-bottom: 5px; display: inline-block;">Nama</label><br>
+      <input type="text" name="nama" id="nama" style="margin-bottom: 15px;" required value="<%= contact.nama %>" />
+
+      <br>
+
+      <label for="nohp" style="margin-bottom: 5px; display: inline-block;">Nomor Handphone</label><br>
+      <input type="text" name="nohp" id="nohp" style="margin-bottom: 15px;" required value="<%= contact.nohp %>" />
+
+      <br>
+
+      <label for="email" style="margin-bottom: 5px; display: inline-block;">Email</label><br>
+      <input type="email" name="email" id="email" value="<%= contact.email %>" />
+
+      <br><br>
+
+      <button type="submit">Ubah Data</button>
+    </form>

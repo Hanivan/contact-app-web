@@ -1,0 +1,35 @@
+<h1>Anda berada di halaman Contact</h1>
+<h3>Hubungi Kami</h3>
+<p>Youtube: Lintasan Video</p>
+
+<div class="container">
+   <h2 class="title-contact">Daftar Kontak</h2>
+   <a href="/contact/add" class="c-add">Tambah Data Kontak</a>
+
+   <% if(msg.length !== 0) { %>
+      <p class="success"><%= msg %></p>
+   <% } %>
+
+   <table>
+ <tr>
+    <th>No</th>
+    <th>Nama</th>
+    <th>Nomor Handphone</th>
+    <th>Aksi</th>
+ </tr>
+ <% if(contacts.length === 0) { %>
+    <p class="alert">Data kontak tidak ada. </p>
+ <% } %>
+ <% let no = 1 %>
+ <% contacts.forEach((c, i) => { %>
+  <tr>
+    <td><%= i+1 %></td>
+    <td><%= c.nama %></td>
+    <td><%= c.nohp %></td>
+    <td>
+       <a href="/contact/<%= c.nama %>" class="t-link">&#9873; Detail</a>
+    </td>
+  </tr>
+ <% }) %>
+</table>
+<div>
